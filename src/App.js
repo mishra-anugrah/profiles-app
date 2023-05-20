@@ -1,7 +1,8 @@
 import "./App.scss";
 import { UserList } from "./components/UserList";
 import { HomeList } from "./screens/HomeList";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/styles";
+import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {

@@ -7,10 +7,40 @@ import List from "@mui/material/List";
 export const UserList = (props) => {
   const { users } = props;
 
-  const useStyles = makeStyles((theme) => ({
+  const useStyles = makeStyles(() => ({
     usersListContainer: {
       borderRadius: "30px",
+      height: "560px",
+      width: "602px",
+      // overflow: 'auto',
+    },
+    usersTitle: {
+      backgroundColor: "#F6F6F6",
+      height: "108px",
+      fontSize: "21px",
+      color: "#545454",
+      lineHeight: "108px",
+      textAlign: "center",
+      fontWeight: "500",
+      // overflow: "auto",
+    },
+    usersList: {
+      height: "425px",
       overflow: "auto",
+      padding: "0 15px",
+      "&::-webkit-scrollbar": {
+        backgroundColor: "#fff",
+        width: "16px",
+      },
+      "&::-webkit-scrollbar-track": {
+        backgroundColor: "#fff",
+      },
+
+      "&::-webkit-scrollbar-thumb": {
+        backgroundColor: "#d8d8d8",
+        borderRadius: "16px",
+        border: "5px solid #fff",
+      },
     },
   }));
 
@@ -21,12 +51,12 @@ export const UserList = (props) => {
   }, [users]);
   return (
     <Paper
-      classes={classes.usersListContainer}
-      className="user-list-container"
+      className={`${classes.usersListContainer} user-list-container`}
+      // className="user-list-container"
       elevation={4}
     >
-      <div className="users-title">Select an account</div>
-      <Paper classes={classes.usersList} elevation={0}>
+      <div className={classes.usersTitle}>Select an account</div>
+      <Paper className={classes.usersList} elevation={0}>
         {users ? (
           <List>
             {users.map((user, index) => (
