@@ -1,5 +1,4 @@
 import "./App.scss";
-import { UserList } from "./components/UserList";
 import { HomeList } from "./screens/HomeList";
 import { ThemeProvider } from "@mui/styles";
 import { createTheme } from "@mui/material/styles";
