@@ -22,6 +22,7 @@ export const UserList = (props) => {
       lineHeight: "108px",
       textAlign: "center",
       fontWeight: "500",
+      borderRadius: "30px 30px 0 0",
       // overflow: "auto",
     },
     usersList: {
@@ -51,12 +52,16 @@ export const UserList = (props) => {
   }, [users]);
   return (
     <Paper
-      className={`${classes.usersListContainer} user-list-container`}
-      // className="user-list-container"
+      className={classes.usersListContainer}
+      sx={{ borderRadius: "30px" }}
       elevation={4}
     >
       <div className={classes.usersTitle}>Select an account</div>
-      <Paper className={classes.usersList} elevation={0}>
+      <Paper
+        className={classes.usersList}
+        sx={{ borderRadius: "30px" }}
+        elevation={0}
+      >
         {users ? (
           <List>
             {users.map((user, index) => (
