@@ -10,9 +10,10 @@ import {
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const ProfileMenuPopup = (props) => {
-  const { userData } = props;
+  const { userData, otherUsers } = props;
 
   const useStyles = makeStyles(() => ({
     popupMenu: {
@@ -52,6 +53,10 @@ export const ProfileMenuPopup = (props) => {
     popupMenuUsersList: {
       display: "flex",
       flexDirection: "column",
+      "& a": {
+        color: "#545454",
+        textDecoration: "none",
+      },
     },
   }));
 
@@ -78,45 +83,58 @@ export const ProfileMenuPopup = (props) => {
         <Divider flexItem variant="fullWidth" />
         <div className={classes.popupMenuUsersList}>
           <List disablePadding>
-            <ListItem>
-              <ListItemAvatar>
-                <Avatar className={`${classes.popupUsersAvatar}`}>
-                  <img src={userData.profilepicture} alt={userData.name} />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText>{userData.name}</ListItemText>
-            </ListItem>
+            <Link to={`user/${otherUsers[0].id}/profile`}>
+              <ListItem>
+                <ListItemAvatar>
+                  <Avatar className={`${classes.popupUsersAvatar}`}>
+                    <img
+                      src={otherUsers[0].profilepicture}
+                      alt={otherUsers[0].name}
+                    />
+                  </Avatar>
+                </ListItemAvatar>
+                <ListItemText>{otherUsers[0].name}</ListItemText>
+              </ListItem>
+            </Link>
 
             <Divider
               flexItem
               variant="fullWidth"
-              sx={{
-                position: "relative",
-                left: "-21%",
-                width: "144%",
-              }}
+              // sx={{
+              //   position: "relative",
+              //   left: "-21%",
+              //   width: "144%",
+              // }}
             />
 
-            <ListItem>
-              <ListItemAvatar>
-                <Avatar className={`${classes.popupUsersAvatar}`}>
-                  <img src={userData.profilepicture} alt={userData.name} />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText>{userData.name}</ListItemText>
-            </ListItem>
+            <Link to={`user/${otherUsers[1].id}/profile`}>
+              <ListItem>
+                <ListItemAvatar>
+                  <Avatar className={`${classes.popupUsersAvatar}`}>
+                    <img
+                      src={otherUsers[1].profilepicture}
+                      alt={otherUsers[1].name}
+                    />
+                  </Avatar>
+                </ListItemAvatar>
+                <ListItemText>{otherUsers[1].name}</ListItemText>
+              </ListItem>
+            </Link>
           </List>
-          <Button
-            variant="contained"
-            className={classes.signoutButton}
-            sx={{
-              backgroundColor: "#D55151",
-              borderRadius: "20px",
-              width: "75%",
-            }}
-          >
-            Sign out
-          </Button>
+          <Link to="/">
+            <Button
+              variant="contained"
+              className={classes.signoutButton}
+              sx={{
+                backgroundColor: "#D55151",
+                borderRadius: "20px",
+                width: "50%",
+                left: "25%",
+              }}
+            >
+              Sign out
+            </Button>
+          </Link>
         </div>
       </Paper>
     </>

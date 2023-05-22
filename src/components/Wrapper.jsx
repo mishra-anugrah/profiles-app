@@ -3,6 +3,7 @@ import { Outlet, useLocation, useParams } from "react-router-dom";
 import { SideBar } from "./SideBar";
 import { Header } from "./Header";
 import { useSelector } from "react-redux";
+import { getNextTwoIndices } from "../utils";
 
 export const Wrapper = () => {
   const [currentPage, setCurrentPage] = useState();
@@ -25,11 +26,20 @@ export const Wrapper = () => {
     return allusers.filter((item) => item.id === Number(userId))[0];
   });
 
+  const otherUsers = useSelector((state) => {
+    const [index1, index2] = getNextTwoIndices(Number(userId));
+    return [state.users.users[index1], state.users.users[index2]];
+  });
+
   return (
     <div className="routed-pages">
       <SideBar currentPage={currentPage} currentUserId={currentUserId} />
       <div className="right-section-container">
-        <Header currentPage={currentPage} userData={userData} />
+        <Header
+          currentPage={currentPage}
+          userData={userData}
+          otherUsers={otherUsers}
+        />
         <Outlet />
       </div>
     </div>

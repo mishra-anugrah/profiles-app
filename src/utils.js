@@ -12,3 +12,17 @@ export const getValueFromObject = (o, s) => {
   }
   return o;
 };
+
+const rotateIndex = (index) => {
+  if (index > 9) {
+    return index - 9;
+  }
+  return index;
+};
+
+export const getNextTwoIndices = (currentIndex) => {
+  const index1 = rotateIndex(currentIndex);
+  const index2 = rotateIndex(currentIndex + 1);
+
+  return [index1, index2];
+};

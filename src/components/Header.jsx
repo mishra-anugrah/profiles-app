@@ -4,7 +4,7 @@ import { Divider, Paper } from "@mui/material";
 import { ProfileMenuPopup } from "./ProfileMenuPopup";
 
 export const Header = (props) => {
-  const { currentPage, userData } = props;
+  const { currentPage, userData, otherUsers } = props;
   const [heading, setHeading] = useState(null);
   const [showProfileMenu, setShowProfileMenu] = useState();
 
@@ -66,7 +66,11 @@ export const Header = (props) => {
           <span>{userData.name}</span>
         </div>
       </div>
-      {showProfileMenu ? <ProfileMenuPopup userData={userData} /> : <></>}
+      {showProfileMenu ? (
+        <ProfileMenuPopup userData={userData} otherUsers={otherUsers} />
+      ) : (
+        <></>
+      )}
       <Divider />
     </>
   );
