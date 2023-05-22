@@ -19,7 +19,7 @@ export const Wrapper = () => {
       const page = pathname.split("/")[3];
       setCurrentPage(page);
     }
-  }, [userId, pathname]);
+  }, [userId, pathname, currentUserId]);
 
   const userData = useSelector((state) => {
     const allusers = state.users.users;

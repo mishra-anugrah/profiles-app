@@ -4,7 +4,7 @@ import { profilesGroupsConfig } from "../config/groupsConfig";
 
 import Divider from "@mui/material/Divider";
 import { makeStyles } from "@mui/styles";
-import { useOutletContext, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export const Profile = (props) => {

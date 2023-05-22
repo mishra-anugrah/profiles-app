@@ -17,7 +17,7 @@ export const LandingPage = () => {
     };
 
     fetchUsers();
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="landing-page-container">

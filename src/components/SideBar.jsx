@@ -1,9 +1,7 @@
-import { useEffect, useState } from "react";
-// import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 import { MenuList, MenuItem, ListItemText, ListItemIcon } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import arrow from "../assets/arrow.svg";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const SideBar = (props) => {
   const { currentPage, currentUserId } = props;
