@@ -1,0 +1,66 @@
+//// Inner pages with navigation ::after
+.routed-pages {
+    display: flex;
+    margin: 50px;
+    flex-wrap: wrap;
+
+    .right-section-container {
+        margin-left: 50px;
+        flex-grow: 1;
+    }
+}
+
+//// Side Bar
+.divider {
+    color: white;
+    background-color: #a3a3a3;
+}
+
+.active {
+    color: white;
+}
+
+.sidebar-container {
+    width: 100px;
+    height: 100vh;
+    width: 19%;
+    background: linear-gradient(180deg, #3a59c8 0%, #6456c8 89.22%);
+    border-radius: 25px;
+
+    & a {
+        color: #a3a3a3;
+        text-decoration: none;
+
+    }
+
+    & span {
+        font-size: 1.25rem;
+    }
+
+    & .list {
+        padding: 100% 20px;
+    }
+
+    & img {
+        // position: absolute;
+        // left: calc(100% - 31px);
+        // left: 87%;
+
+        position: absolute;
+        left: 95%;
+        top: -0.3em;
+    }
+
+    & li:hover {
+        background-color: #ffffff00;
+    }
+}
+
+//// Coming Soon
+.coming-soon {
+    color: #EEEEEE;
+    font-size: 85px;
+    font-weight: 900;
+    display: inline-block;
+    margin: 25%;
+}

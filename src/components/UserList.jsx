@@ -3,6 +3,8 @@ import Paper from "@mui/material/Paper";
 import { makeStyles } from "@mui/styles";
 import { UserListItem } from "./UserListItem";
 import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import { Link } from "react-router-dom";
 
 export const UserList = (props) => {
   const { users } = props;
@@ -50,6 +52,7 @@ export const UserList = (props) => {
   useEffect(() => {
     console.log(users);
   }, [users]);
+
   return (
     <Paper
       className={classes.usersListContainer}
@@ -65,10 +68,22 @@ export const UserList = (props) => {
         {users ? (
           <List>
             {users.map((user, index) => (
-              <UserListItem
-                userName={user.name}
-                profilePhotoURL={user.profilepicture}
-              />
+              <>
+                <Link
+                  to={`user/${user.id}/profile`}
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <UserListItem
+                    userName={user.name}
+                    profilePhotoURL={user.profilepicture}
+                  />
+                </Link>
+                {index === users.length - 1 ? (
+                  <></>
+                ) : (
+                  <Divider variant="middle" />
+                )}
+              </>
             ))}
           </List>
         ) : (
