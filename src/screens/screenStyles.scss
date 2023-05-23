@@ -12,3 +12,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+//// Inner pages with navigation ::after
+.wrapper {
+    display: flex;
+    margin: 50px 50px 0 50px;
+
+    .right-section-container {
+        margin-left: 50px;
+        flex-grow: 1;
+    }
+}

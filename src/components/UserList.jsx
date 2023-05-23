@@ -66,6 +66,7 @@ export const UserList = (props) => {
                 <Link
                   to={`user/${user.id}/profile`}
                   style={{ textDecoration: "none", color: "inherit" }}
+                  key={`user-${user.id}`}
                 >
                   <UserListItem
                     userName={user.name}

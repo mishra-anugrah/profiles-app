@@ -1,14 +1,3 @@
-//// Inner pages with navigation ::after
-.routed-pages {
-    display: flex;
-    margin: 50px;
-
-    .right-section-container {
-        margin-left: 50px;
-        flex-grow: 1;
-    }
-}
-
 //// Side Bar
 .divider {
     color: white;
@@ -68,7 +57,7 @@
 }
 
 @media (max-width: 481px) {
-    .routed-pages {
+    .wrapper {
         flex-wrap: wrap;
     }
 

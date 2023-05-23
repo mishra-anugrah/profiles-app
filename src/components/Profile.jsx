@@ -19,7 +19,7 @@ export const Profile = (props) => {
     profileContainer: {
       display: "flex",
       width: "100%",
-      padding: "40px 0",
+      padding: "40px 0 0 40px",
     },
     profileSection: {
       padding: "0 30px 0 0",
@@ -68,15 +68,5 @@ export const Profile = (props) => {
         </div>
       </div>
     </>
-    // <>
-    //   {profilesGroupsConfig.map((groupConfig, groupIndex) => (
-    //     <ProfileFieldsGroup
-    //       key={`profilegroup${groupIndex}`}
-    //       groupConfig={groupConfig}
-    //       // groupConfig={profilesGroupsConfig[0]}
-    //       userData={userData}
-    //     />
-    //   ))}
-    // </>
   );
 };

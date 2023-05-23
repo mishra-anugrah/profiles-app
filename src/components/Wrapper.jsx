@@ -4,6 +4,7 @@ import { SideBar } from "./SideBar";
 import { Header } from "./Header";
 import { useSelector } from "react-redux";
 import { getNextTwoIndices } from "../utils";
+import { ChatWrapper } from "./ChatWrapper";
 
 export const Wrapper = () => {
   const [currentPage, setCurrentPage] = useState();
@@ -32,7 +33,7 @@ export const Wrapper = () => {
   });
 
   return (
-    <div className="routed-pages">
+    <div className="wrapper">
       <SideBar currentPage={currentPage} currentUserId={currentUserId} />
       <div className="right-section-container">
         <Header
@@ -41,6 +42,9 @@ export const Wrapper = () => {
           otherUsers={otherUsers}
         />
         <Outlet />
+        <div className="chats-container">
+          <ChatWrapper />
+        </div>
       </div>
     </div>
   );
