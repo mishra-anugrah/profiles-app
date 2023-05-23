@@ -19,7 +19,7 @@ export const ProfileMenuPopup = (props) => {
     popupMenu: {
       width: "320px",
       height: "420px",
-      position: "fixed",
+      position: "absolute",
       top: "13%",
       left: "calc(100% - 377px)",
       padding: "30px",
@@ -27,6 +27,7 @@ export const ProfileMenuPopup = (props) => {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
+      zIndex: "999",
     },
     popupMenuProfilePicture: {
       height: "96px",

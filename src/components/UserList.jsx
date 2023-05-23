@@ -24,7 +24,6 @@ export const UserList = (props) => {
       textAlign: "center",
       fontWeight: "500",
       borderRadius: "30px 30px 0 0",
-      // overflow: "auto",
     },
     usersList: {
       height: "425px",
