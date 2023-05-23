@@ -107,38 +107,4 @@ export const SideBar = (props) => {
       </MenuList>
     </div>
   );
-
-  // return (
-  //   <div className="sidebar-container">
-  //     <List className="list">
-  //       <img src={arrow}></img>
-  //       <ListItem disablePadding>
-  //         <ListItemButton>
-  //           <ListItemText primary={"Profile"} className="active" />
-  //         </ListItemButton>
-  //       </ListItem>
-  //       <Divider variant="middle" className="divider" />
-
-  //       <ListItem disablePadding>
-  //         <ListItemButton>
-  //           <ListItemText primary={"Posts"} />
-  //         </ListItemButton>
-  //       </ListItem>
-  //       <Divider variant="middle" className="divider" />
-
-  //       <ListItem disablePadding>
-  //         <ListItemButton>
-  //           <ListItemText primary={"Gallery"} />
-  //         </ListItemButton>
-  //       </ListItem>
-  //       <Divider variant="middle" className="divider" />
-
-  //       <ListItem disablePadding>
-  //         <ListItemButton>
-  //           <ListItemText primary={"ToDo"} />
-  //         </ListItemButton>
-  //       </ListItem>
-  //     </List>
-  //   </div>
-  // );
 };

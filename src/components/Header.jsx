@@ -22,7 +22,7 @@ export const Header = (props) => {
       marginBottom: "30px",
     },
     pageName: {
-      fontSize: "21px",
+      fontSize: "22px",
       color: "#545454",
       textAlign: "left",
       fontWeight: "500",

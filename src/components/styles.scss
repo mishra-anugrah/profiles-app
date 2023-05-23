@@ -2,7 +2,6 @@
 .routed-pages {
     display: flex;
     margin: 50px;
-    flex-wrap: wrap;
 
     .right-section-container {
         margin-left: 50px;
@@ -63,4 +62,19 @@
     font-weight: 900;
     display: inline-block;
     margin: 25%;
+}
+//// Map
+.leaflet-container {
+    height: 50vh;
+    width: 35vw;
+    margin: 10px;
+    border-radius: 30px;
+    z-index: -1
+}
+
+@media (max-width: 481px) {
+    .routed-pages {
+        flex-wrap: wrap;
+    }
+
 }

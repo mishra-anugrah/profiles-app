@@ -97,15 +97,7 @@ export const ProfileMenuPopup = (props) => {
               </ListItem>
             </Link>
 
-            <Divider
-              flexItem
-              variant="fullWidth"
-              // sx={{
-              //   position: "relative",
-              //   left: "-21%",
-              //   width: "144%",
-              // }}
-            />
+            <Divider flexItem variant="fullWidth" />
 
             <Link to={`user/${otherUsers[1].id}/profile`}>
               <ListItem>

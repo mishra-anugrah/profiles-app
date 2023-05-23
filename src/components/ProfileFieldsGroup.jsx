@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { makeStyles } from "@mui/styles";
 import { getValueFromObject } from "../utils";
+import { Map } from "./Map";
 
 export const ProfileFieldsGroup = (props) => {
   const { userData, groupConfig, alignTitle } = props;
@@ -100,7 +101,18 @@ export const ProfileFieldsGroup = (props) => {
               </div>
             </div>
           ) : (
-            <div>MAP HERE</div>
+            <Map
+              positions={[
+                Number(getValueFromObject(userData, field.valueKey).lng),
+                Number(getValueFromObject(userData, field.valueKey).lat),
+              ]}
+              center={[
+                Number(getValueFromObject(userData, field.valueKey).lng),
+                Number(getValueFromObject(userData, field.valueKey).lat),
+              ]}
+              zoom={3}
+              scrollWheelZoom={false}
+            />
           )}
         </>
       ))}

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Paper from "@mui/material/Paper";
 import { makeStyles } from "@mui/styles";
 import { UserListItem } from "./UserListItem";
@@ -14,7 +14,6 @@ export const UserList = (props) => {
       borderRadius: "30px",
       height: "560px",
       width: "602px",
-      // overflow: 'auto',
     },
     usersTitle: {
       backgroundColor: "#F6F6F6",
@@ -48,10 +47,6 @@ export const UserList = (props) => {
   }));
 
   const classes = useStyles();
-
-  useEffect(() => {
-    console.log(users);
-  }, [users]);
 
   return (
     <Paper
